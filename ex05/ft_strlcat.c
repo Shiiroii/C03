@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 14:09:44 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/22 14:46:40 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/22 14:54:21 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	lendest;
 
 	i = 0;
-	lendest = 0;
-	while (dest[lendest])
-	{
-		lendest++;
-	}
+	lendest = ft_strlen(dest);
 	if (lendest >= size)
 	{
 		return (size + ft_strlen(src));
@@ -54,7 +50,7 @@ int	main()
 {
 	char	src[] = "ca va?";
 	char	dest[] = "Salut comment ";
-	printf("%d", ft_strlcat(dest, src, 25));
+	printf("%d", ft_strlcat(dest, src, 10));
 	return (0);
 }
 

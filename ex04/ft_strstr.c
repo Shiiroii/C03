@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 14:01:28 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/22 14:09:16 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/22 16:54:49 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			if (to_find[j] == '\0')
 			{
-				return (to_find);
+				return (str + i);
 			}
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 11:50:08 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/22 14:43:04 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/22 16:48:16 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dest[i + j] = src[j];
 		j++;
 	}
-	dest[i] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
 }
 
