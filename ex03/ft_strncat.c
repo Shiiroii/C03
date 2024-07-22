@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/21 11:49:41 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/22 14:43:11 by liulm            ###   ########.fr       */
+/*   Created: 2024/07/22 11:50:08 by liulm             #+#    #+#             */
+/*   Updated: 2024/07/22 14:43:04 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;
@@ -21,23 +21,23 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	while (src[j])
+	while (src[j] && j < nb)
 	{
 		dest[i + j] = src[j];
 		j++;
 	}
-	dest[i + j] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
-// ---------------------------------
+// ------------------------------------------------------
 
 #include <stdio.h>
 
 int	main()
 {
-	char	src[] = "va?";
-	char	dest[] = "Salut comment ca ";
-	printf("%s", ft_strcat(dest, src));
+	char	src[] = "ca va?";
+	char	dest[] = "Salut comment ";
+	printf("%s", ft_strncat(dest, src, 4));
 	return (0);
 }
