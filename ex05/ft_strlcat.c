@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 14:09:44 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/22 14:54:21 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/24 01:00:35 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,14 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	lendest;
+	unsigned int	lensrc;
 
 	i = 0;
 	lendest = ft_strlen(dest);
+	lensrc = ft_strlen(src);
 	if (lendest >= size)
 	{
-		return (size + ft_strlen(src));
+		return (size + lensrc);
 	}
 	while (src[i] && lendest + i < size - 1)
 	{
@@ -39,7 +41,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		i++;
 	}
 	dest[lendest + i] = '\0';
-	return (lendest + ft_strlen(src));
+	return (lendest + lensrc);
 }
 
 // ------------------------------------------------------
