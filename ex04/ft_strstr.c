@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 14:01:28 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/25 13:51:19 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/31 13:56:24 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strstr(char *str, char *to_find)
 	int	j;
 
 	i = 0;
+	if (to_find[0] == '\0')
+		return (str);
 	while (str[i])
 	{
 		j = 0;
